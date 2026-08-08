@@ -26,7 +26,8 @@ server {
 
     # 🔥 Proxy users endpoints directly
     location /users {
-        proxy_pass http://172.31.45.124:5000;
+###backend pvt ip
+        proxy_pass http://172.31.45.124:5000;  
         proxy_http_version 1.1;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
