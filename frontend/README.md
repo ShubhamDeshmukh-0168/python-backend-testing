@@ -26,17 +26,15 @@ server {
 
     # 🔥 Proxy users endpoints directly
     location /users {
-        proxy_pass http://172.31.27.126:5000;
+        proxy_pass http://172.31.45.124:5000;
         proxy_http_version 1.1;
-
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
 
         proxy_redirect off;
-    }
-
+    } 
     # React / HTML frontend
     root /usr/share/nginx/html;
     index index.html;
