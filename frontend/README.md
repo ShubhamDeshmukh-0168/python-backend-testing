@@ -4,9 +4,11 @@ Run the following on the public-facing EC2 (nginx) instance.
 
 ### After cloneing your repo change frontend index.html file url must be empty only
 once chek in your config file below one is comented or uncomented if commented please uncoment and build the package
+
 ```
  const backendIP = "";  // For reverse proxy it is mandatory and keep it empty dont pass anty url or ip here  
-
+add your frontend index.html code in.  /usr/share/nginx/html/
+index.html
 ```
 ```bash
 sudo yum update -y
